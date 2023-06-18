@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Boxicons CSS -->
+    <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+    <!-- Boxicons CSS -->
+
+    <!-- -------------MapBox GL JS Files------------ -->
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.9.1/mapbox-gl.css' rel='stylesheet' />
+    <!-- -------------MapBox GL JS Files------------ -->
+    
+    <title>BeCool!</title>
+
+
+    <!--Map Style-->
+    <style>
+      body{
+          margin:0px;
+          padding: 0;
+      }
+      #map{
+        margin-top:80px;
+        height:95vh;
+        width:100vw;
+      }
+      .mapboxgl-popup {
+        font: 12px/20px 'Helvetica Neue', Arial, Helvetica, sans-serif;
+      }
+      
+    </style>
+    <!--Map Style-->
+
+
+    <nav id="menu"></nav>
+    <div id="map"></div>
+
+    <link rel="stylesheet" href="ccm-css-part.css" />
+    <script src="C:\Users\newge\OneDrive\Desktop\BeCool! Map\map\script-cool.js" defer></script> <!--JS sheet for map-->
+  </head>
+  <body>
+    
+    <!--Map Resources-->
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+    <link rel="stylesheet" href="C:\Users\newge\OneDrive\Desktop\BeCool! Map\map\geocoder.css" type="text/css">
+    <div id='map'></div>
+    <!--Map Resources-->
+
+
+
+
+
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo_item">
+        <i class="bx bx-menu" id="sidebarOpen"></i>
+        <img src="C:\Users\newge\OneDrive\Desktop\BeCool! Map\images\logo.png" alt=""></i><h2>Be Cool!</h2>
+      </div>
+
+      <div class="navbar_content">
+        <i class="bi bi-grid"></i>
+        <i class='bx bx-sun' id="darkLight"></i>
+      </div>
+    </nav>
+
+    <!-- sidebar -->
+    <nav class="sidebar">
+      <div class="menu_content">
+
+        <ul class="menu_items">
+          <div class="menu_title menu_editor"></div>
+          <!-- duplicate these li tag if you want to add or remove navlink only -->
+
+
+
+
+
+          <!--Filters-->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-filter"></i>
+              </span>
+              <span class="navlink">Filters</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+
+
+        <!--Filters-->
+
+
+
+
+
+
+        <!--Settings-->
+        <ul class="menu_items">
+          <div class="menu_title menu_setting"></div>
+          <li class="item">
+            <a href="C:\Users\newge\OneDrive\Desktop\BeCool! Map\settings\settings-cool.html" target="_blank" class="nav_link">
+              <span class="navlink_icon">
+                <i class="bx bx-cog"></i>
+              </span>
+              <span class="navlink">Settings</span>
+            </a>
+          </li>
+          <!--Settings-->
+
+
+
+
+
+          <!--Resources-->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bxs-package"></i>
+            </span>
+            <span class="navlink">Resources</span>
+            <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="https://www.nyc.gov/site/em/volunteer/nyc-cert.page" target="_blank" class="nav_link sublink">NYC CERT</a>
+              <a href="https://www.nycgovparks.org/about/health-and-safety-guide/cool-it-nyc" target ="_blank" class="nav_link sublink">CoolIt! NYC</a>
+              <a href="https://otda.ny.gov/programs/heap/" target="_blank" class="nav_link sublink">HEAP</a>
+              <a href="https://a858-nycnotify.nyc.gov/notifynyc/" target="_blank" class="nav_link sublink">Notify NYC</a>
+              <a href="https://www.nyc.gov/assets/em/html/beat-the-heat/beattheheat.html" target="_blank" class="nav_link sublink">Beat The Heat</a>
+              <a href="#" target="_blank" class="nav_link sublink">More resources</a>
+            </ul>
+          </li>
+          <!--Resources-->
+
+
+
+
+          <!--About-->
+          <li class="item">
+            <a href="C:\Users\newge\OneDrive\Desktop\BeCool! Map\about\about-cool.html" target="_blank" class="nav_link">
+              <span class="navlink_icon">
+                <i class='bx bx-info-circle'></i>
+              </span>
+              <span class="navlink">About</span>
+            </a>
+          </li>
+          <!--About-->
+
+
+
+
+          
+          <!--Contact-->
+          <li class="item">
+            <div href="#" class="nav_link submenu_item">
+              <span class="navlink_icon">
+                <i class="bx bx-envelope"></i>
+              </span>
+              <span class="navlink">Contact</span>
+              <i class="bx bx-chevron-right arrow-left"></i>
+            </div>
+
+            <ul class="menu_items submenu">
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=contact.becool.author@gmail.com" target="_blank" class="nav_link sublink">
+                <span>
+                  <i class='bx-pull-left bx bxs-user bx-sm' id="author-icon"></i>
+                </span>
+                <span class="navlink" id="author">Author</span>
+              </a>
+              <a href="https://www.nyc.gov/site/em/contact/contact.page" target="_blank" class="nav_link sublink">
+                <img id="nycem" src="data:image/png;base64,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">
+                <span class="navlink" id="nycem">NYCEM</span>
+              </a>
+              <a href="https://mail.google.com/mail/?view=cm&fs=1&to=business.becool@gmail.com" target="_blank" class="nav_link sublink">
+                <i class='bx-pull-left bx bx-store-alt bx-sm'></i>
+                <span class="navlink" id="marketing">Business Inquiries</span>
+              </a>
+            </ul>
+          </li>
+          <!--Contact-->
+
+        </ul>
+
+
+
+
+        <!-- Sidebar Open / Close -->
+        <div class="bottom_content">
+          <div class="bottom expand_sidebar">
+            <span> Expand</span>
+            <i class='bx bx-log-in' ></i>
+          </div>
+          <div class="bottom collapse_sidebar">
+            <span> Collapse</span>
+            <i class='bx bx-log-out'></i>
+          </div>
+        </div>
+      </div>
+    </nav>
+    <!-- JavaScript -->
+    <script src="ccm-js-part.js"></script>
+    <script src="C:\Users\newge\OneDrive\Desktop\BeCool! Map\settings\settings-cool.js"></script>
+  </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <title>
+            Settings - BeCool!
+        </title>
+        <link rel="stylesheet" href="C:\Users\newge\OneDrive\Desktop\BeCool! Map\settings\setting-cool.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="back">
+                <nav>
+                    <a onclick="tabs(100)" class="back-button">
+                        <a href="C:\Users\newge\OneDrive\Desktop\BeCool! Map\ccm-html-part.html">
+                            <i class='bx-pull-left bx bx-arrow-back bx-md bx-border'></i>
+                        </a>
+                    </a>
+                </nav>
+            </div>
+            <div class="navbar">
+                <nav>
+                    <!--Interface theme-->
+                    <a onclick="tabs(0)" class="tab active">
+                        <i class='bx bx-brush bx-lg bx-tada-hover' ></i>Theme
+                    </a>
+                    <!--Map theme-->
+                    <a onclick="tabs(1)" class="tab">
+                        <i class='bx bx-map-alt bx-lg bx-tada-hover'></i>Map Settings
+                    </a>
+                    <!--Languages-->
+                    <a onclick="tabs(2)" class="tab">
+                        <i class='bx bx-chat bx-lg bx-tada-hover'></i>Languages
+                    </a>
+                    <!--Accessibility Features-->
+                    <a onclick="tabs(3)" class="tab">
+                        <i class='bx bx-user-plus bx-lg bx-tada-hover'></i>Accessibility
+                    </a>
+                    <!--Q/A-->
+                    <a onclick="tabs(4)" class="tab">
+                        <i class="bx bx-question-mark bx-lg bx-tada-hover"></i>Q/A
+                    </a>
+                </nav>    
+            </div>
+            <div class="interface-settings">
+                <div class="theme tabShow">
+                    <h2>Theme</h2>
+                        <input id="light-color" type="submit" value="" style="background-color:aliceblue; width: 50px; height: 50px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="" style="background-color:black; width: 50px; height: 50px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="" style="background-color:orange; width: 50px; height: 50px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="" style="background-color:lightblue; width: 50px; height: 50px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                    <h2>Text Size</h2>
+                    <ul class="text-size-options">
+                        <input type="submit" value="Small" style="font-size : 30px; width: 13%; height: 120px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="Medium" style="font-size : 30px; width: 13%; height: 120px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="Large" style="font-size : 30px; width: 13%; height: 120px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                        <input type="submit" value="X-Large" style="font-size : 30px; width: 13%; height: 120px; border-radius:10px; border-width: 5px; margin: 20px"/>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </body>
